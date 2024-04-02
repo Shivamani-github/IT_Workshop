@@ -1,0 +1,377 @@
+user@shivas-pc:~$ gerp -c 'unix' gerpfile.txt
+Command 'gerp' not found, did you mean:
+  command 'grep' from deb grep (3.11-2)
+Try: sudo apt install <deb name>
+user@shivas-pc:~$ grep -c 'unix' grepfile.txt
+2
+user@shivas-pc:~$ grep -h 'unix' grepfile.txt
+linux and unix commands
+this is unix    
+user@shivas-pc:~$ grep -l 'unix' grepfile.txt
+grepfile.txt
+user@shivas-pc:~$ grep -n 'unix' grepfile.txt
+2:linux and unix commands
+3:this is unix    
+user@shivas-pc:~$ grep -v 'unix' grepfile.txt
+wellcome to ubuntu  
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ grep -e 'unix' grepfile.txt
+linux and unix commands
+this is unix    
+user@shivas-pc:~$ grep -o 'unix' grepfile.txt
+unix
+unix
+user@shivas-pc:~$ sed 's/rgukt/mlrit/' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+mlrit is one of the greatest university
+
+user@shivas-pc:~$ sed 's/is/ese/2' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this ese unix    
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ sed 's/ese/is/2' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ sed 's/linux/LINUX/g' grepfile.txt
+wellcome to ubuntu  
+LINUX and unix commands
+this is unix    
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ sed '2s/linux/LINUX/g' grepfile.txt
+wellcome to ubuntu  
+LINUX and unix commands
+this is unix    
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ sed '2s/linux/LINUX/2g' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ sed '2d' grepfile.txt
+wellcome to ubuntu  
+this is unix    
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ sed '/unix/d' grepfile.txt
+wellcome to ubuntu  
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ sed '$d' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+rgukt is one of the greatest university
+user@shivas-pc:~$ sed 's/unix/linux/p' grepfile.txt
+wellcome to ubuntu  
+linux and linux commands
+linux and linux commands
+this is linux    
+this is linux    
+rgukt is one of the greatest university
+
+user@shivas-pc:~$ sed '$d' grepfile.txt
+wellcome to ubuntu  
+linux and unix commands
+this is unix    
+rgukt is one of the greatest university
+user@shivas-pc:~$ cat file2.txt
+cat: file2.txt: No such file or directory
+user@shivas-pc:~$ cat>file2.txt
+abhishek                           
+chitransh
+satish
+rajan
+naveen
+divyam
+harsh^C
+user@shivas-pc:~$ sort file2.c
+sort: cannot read: file2.c: No such file or directory
+user@shivas-pc:~$ sort file2.txt
+abhishek
+chitransh
+divyam
+naveen
+rajan
+satish
+user@shivas-pc:~$ sort -r file2.txt
+satish
+rajan
+naveen
+divyam
+chitransh
+abhishek
+user@shivas-pc:~$ sort -o file2.txt
+^C  
+user@shivas-pc:~$ cat>file3.txt
+12
+14
+11
+9
+15
+8
+2
+4
+1
+3
+^C
+user@shivas-pc:~$ sort -r file3.txt
+9
+8
+4
+3
+2
+15
+14
+12
+11
+1
+user@shivas-pc:~$ cat>file4.txt
+4
+5
+3
+6
+2
+7
+1
+9
+8
+0
+^C
+user@shivas-pc:~$ sort file4.txt
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+user@shivas-pc:~$ sort -r  file4.txt
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+user@shivas-pc:~$ sort -n  file4.txt
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+user@shivas-pc:~$ sort -nr  file4.txt
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+user@shivas-pc:~$ sort -c  file4.txt
+sort: file4.txt:3: disorder: 3
+user@shivas-pc:~$ sort -n  file4.txt
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+user@shivas-pc:~$ sort -c  file4.txt
+sort: file4.txt:3: disorder: 3
+user@shivas-pc:~$ sort -u  file4.txt
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+user@shivas-pc:~$ cat>file4.txt
+^C
+user@shivas-pc:~$ cat>file5.txt
+january
+march
+february    
+april
+june
+may
+july
+september
+october
+december
+november
+^C
+user@shivas-pc:~$ sort   file5.txt
+april
+december
+february
+january
+july
+june
+march
+may
+november
+october
+september
+user@shivas-pc:~$ sort -m  file5.txt
+january
+march
+february
+april
+june
+may
+july
+september
+october
+december
+november
+user@shivas-pc:~$ sort -M  file5.txt
+january
+february
+march
+april
+may
+june
+july
+september
+october
+november
+december
+user@shivas-pc:~$ sort -c  file5.txt
+sort: file5.txt:3: disorder: february
+user@shivas-pc:~$ chmod u+x file5.txt
+user@shivas-pc:~$ chmod go-x file5.txt
+user@shivas-pc:~$ chmod a=rwx file5.txt
+user@shivas-pc:~$ chmod a=w file5.txt
+user@shivas-pc:~$ chmod ugo=w file5.txt
+user@shivas-pc:~$ chmod go-r file5.txt
+user@shivas-pc:~$ chmod go+r file5.txt
+user@shivas-pc:~$ chmod go+rx file5.txt
+user@shivas-pc:~$ chmod go=r file5.txt
+user@shivas-pc:~$ chmod a=rwx file5.txt
+user@shivas-pc:~$ chmod u+x file5.txt
+user@shivas-pc:~$ chmod go-r file5.txt
+user@shivas-pc:~$ chmod go-r file5.txt
+user@shivas-pc:~$ chmod u=r file5.txt
+user@shivas-pc:~$ chmod ugo=w file5.txt
+user@shivas-pc:~$ cat>file6.txt
+ajay manager account 45000
+sunil clerk account 25000
+varun manager sales 50000
+amit manager account 47000
+tarun peon sales 15000
+deepak clerk sales 23000
+sunil peon sales 13000
+satvik director purchase 80000
+user@shivas-pc:~$ grep '$d' file5.txt
+grep: file5.txt: Permission denied
+user@shivas-pc:~$ grep '$d' file6.txt
+user@shivas-pc:~$ grep '$d' file6.txt
+user@shivas-pc:~$ awk '/manager/ {print}' file6.txt
+ajay    manager  account  45000
+varun   manager  sales    50000
+amit    manager  account  47000
+user@shivas-pc:~$ awk '{print $0}' file6.txt
+ajay    manager  account  45000
+sunil   clerk    account  25000
+varun   manager  sales    50000
+amit    manager  account  47000
+tarun   peon     sales    15000
+deepak  clerk    sales    23000
+sunil   peon     sales    13000
+satvik  director purchase 80000
+user@shivas-pc:~$ awk '{print NR,$0}' file6.txt
+1 ajay    manager  account  45000
+2 sunil   clerk    account  25000
+3 varun   manager  sales    50000
+4 amit    manager  account  47000
+5 tarun   peon     sales    15000
+6 deepak  clerk    sales    23000
+7 sunil   peon     sales    13000
+8 satvik  director purchase 80000
+user@shivas-pc:~$ awk '{print $2}' file6.txt
+manager
+clerk
+manager
+manager
+peon
+clerk
+peon
+director
+user@shivas-pc:~$ awk '{print $1,$4}' file6.txt
+ajay 45000
+sunil 25000
+varun 50000
+amit 47000
+tarun 15000
+deepak 23000
+sunil 13000
+satvik 80000
+user@shivas-pc:~$ awk '{print NR}' file6.txt
+1
+2
+3
+4
+5
+6
+7
+8
+user@shivas-pc:~$ awk free -M
+awk: cannot open -M (No such file or directory)
+user@shivas-pc:~$ awk '/Mem/{print}/' free -m
+awk: line 1: runaway regular expression / ...
+user@shivas-pc:~$ awk '/Mem/ {print}/' free -m
+awk: line 1: runaway regular expression / ...
+user@shivas-pc:~$ shutdown -r +5
+Reboot scheduled for Thu 2024-03-28 18:27:16 IST, use 'shutdown -c' to cancel.
+user@shivas-pc:~$ shutdown -c
+user@shivas-pc:~$ shutdown -r +5 reboot
+Reboot scheduled for Thu 2024-03-28 18:28:01 IST, use 'shutdown -c' to cancel.
+user@shivas-pc:~$ shutdown -c
+user@shivas-pc:~$ sudo shutdown 19:00
+[sudo] password for user: 
+Shutdown scheduled for Thu 2024-03-28 19:00:00 IST, use 'shutdown -c' to cancel.
+user@shivas-pc:~$ shutdown -c
+user@shivas-pc:~$ sudo shutdown +10
+Shutdown scheduled for Thu 2024-03-28 18:34:14 IST, use 'shutdown -c' to cancel.
+user@shivas-pc:~$ shutdown -c
+user@shivas-pc:~$ shutdown -H
+Failed to schedule shutdown: Interactive authentication required.
+user@shivas-pc:~$ shutdown -P
+Shutdown scheduled for Thu 2024-03-28 18:25:53 IST, use 'shutdown -c' to cancel.
+user@shivas-pc:~$ shutdown -c
+user@shivas-pc:~$ 
+
+
