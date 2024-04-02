@@ -1,3 +1,211 @@
+#####WEEK1#####
+user@shivas-pc:~$ whoami
+user
+user@shivas-pc:~$ id
+uid=1000(user) gid=1000(user) groups=1000(user),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),132(lxd),133(sambashare)
+user@shivas-pc:~$ groupd
+Command 'groupd' not found, did you mean:
+  command 'groups' from deb coreutils (9.1-1ubuntu2)
+Try: sudo apt install <deb name>
+user@shivas-pc:~$ groups
+user adm cdrom sudo dip plugdev lpadmin lxd sambashare
+user@shivas-pc:~$ who
+user     seat0        2024-04-02 20:40 (login screen)
+user     tty2         2024-04-02 20:40 (tty2)
+user@shivas-pc:~$ last
+user     tty2         tty2             Tue Apr  2 20:40   still logged in
+user     seat0        login screen     Tue Apr  2 20:40   still logged in
+reboot   system boot  6.5.0-25-generic Tue Apr  2 20:39   still running
+user     tty2         tty2             Mon Apr  1 21:19 - down   (01:11)
+user     seat0        login screen     Mon Apr  1 21:19 - down   (01:11)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 21:18 - 22:31  (01:12)
+user     tty2         tty2             Mon Apr  1 11:13 - down   (00:55)
+user     seat0        login screen     Mon Apr  1 11:13 - down   (00:55)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 11:12 - 12:08  (00:55)
+user     tty2         tty2             Mon Apr  1 11:09 - down   (00:01)
+user     seat0        login screen     Mon Apr  1 11:09 - down   (00:01)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 11:08 - 11:10  (00:01)
+user     tty2         tty2             Sun Mar 31 21:33 - down   (02:18)
+user     seat0        login screen     Sun Mar 31 21:33 - down   (02:18)
+reboot   system boot  6.5.0-25-generic Sun Mar 31 21:33 - 23:52  (02:18)
+user     tty2         tty2             Sun Mar 31 20:36 - down   (00:34)
+user     seat0        login screen     Sun Mar 31 20:36 - down   (00:34)
+reboot   system boot  6.5.0-25-generic Sun Mar 31 20:36 - 21:11  (00:35)
+
+wtmp begins Wed Jan 10 08:19:20 2024
+user@shivas-pc:~$ nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+** server can't find google.com: SERVFAIL
+
+user@shivas-pc:~$ cd Desktop
+user@shivas-pc:~/Desktop$ mkdir newfile
+user@shivas-pc:~/Desktop$ rmdir newfile
+user@shivas-pc:~/Desktop$ 
+user@shivas-pc:~/Desktop$ top
+
+top - 21:22:02 up 42 min,  2 users,  load average: 0.27, 0.27, 0.27
+Tasks: 240 total,   1 running, 238 sleeping,   0 stopped,   1 zombie
+%Cpu(s):  3.0 us,  0.8 sy,  0.0 ni, 96.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :   7711.1 total,   2708.9 free,   3180.9 used,   3055.6 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   4530.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                
+   1893 user      20   0 5433412 317264 145448 S   5.7   4.0   2:07.73 gnome-shell                                                                            
+   5292 user      20   0  786976  65736  51340 S   3.3   0.8   0:07.10 gnome-terminal-                                                                        
+   4275 user      20   0 2808500 277448 113692 S   2.3   3.5   2:03.05 Isolated Web Co                                                                        
+   3894 user      20   0   11.7g 420764 220484 S   1.7   5.3   4:30.37 firefox                                                                                
+    840 mysql     20   0 2375896 396488  35840 S   0.7   5.0   0:17.16 mysqld                                                                                 
+     15 root      20   0       0      0      0 S   0.3   0.0   0:00.35 ksoftirqd/0                                                                            
+    155 root     -51   0       0      0      0 S   0.3   0.0   0:07.91 irq/163-SYNA7DAB:00                                                                    
+    554 systemd+  20   0   90564   7424   6656 S   0.3   0.1   0:00.08 systemd-timesyn                                                                        
+   2061 user      20   0  388656  11920   6912 S   0.3   0.2   0:03.17 ibus-daemon                                                                            
+   2280 user      20   0  422540  28976  18544 S   0.3   0.4   0:02.04 ibus-extension-                                                                        
+   5266 root      20   0       0      0      0 I   0.3   0.0   0:00.33 kworker/0:2-events                                                                     
+      1 root      20   0  169676  12912   8944 S   0.0   0.2   0:01.02 systemd                                                                                                              
+user@shivas-pc:~/Desktop$ ps
+    PID TTY          TIME CMD
+   5323 pts/0    00:00:00 bash
+   5521 pts/0    00:00:00 ps
+user@shivas-pc:~/Desktop$ date
+Tuesday 02 April 2024 09:24:35 PM IST
+user@shivas-pc:~/Desktop$ cal
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal
+user@shivas-pc:~/Desktop$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             789624     2244    787380   1% /run
+/dev/nvme0n1p2 244506940 47906712 184107172  21% /
+tmpfs            3948108        0   3948108   0% /dev/shm
+tmpfs               5120        8      5112   1% /run/lock
+efivarfs             184      135        45  76% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    523248     6236    517012   2% /boot/efi
+tmpfs             789620     2520    787100   1% /run/user/1000
+user@shivas-pc:~/Desktop$ cat>newfile
+hello
+^C
+user@shivas-pc:~/Desktop$ rm newfile
+user@shivas-pc:~/Desktop$ touch newfile
+user@shivas-pc:~/Desktop$ rm newfile
+user@shivas-pc:~/Desktop$ history
+    1  gcc substring.c
+    2  clear
+    3  gcc substring.c
+    4  clear
+    5  gcc substring.c
+    6  clear
+    7  gcc substring.c
+    8  cleaf
+    9  clear
+   10  gcc substring.c
+
+
+
+user@shivas-pc:~$ whoami
+user
+user@shivas-pc:~$ id
+uid=1000(user) gid=1000(user) groups=1000(user),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),132(lxd),133(sambashare)
+user@shivas-pc:~$ groupd
+Command 'groupd' not found, did you mean:
+  command 'groups' from deb coreutils (9.1-1ubuntu2)
+Try: sudo apt install <deb name>
+user@shivas-pc:~$ groups
+user adm cdrom sudo dip plugdev lpadmin lxd sambashare
+user@shivas-pc:~$ who
+user     seat0        2024-04-02 20:40 (login screen)
+user     tty2         2024-04-02 20:40 (tty2)
+user@shivas-pc:~$ last
+user     tty2         tty2             Tue Apr  2 20:40   still logged in
+user     seat0        login screen     Tue Apr  2 20:40   still logged in
+reboot   system boot  6.5.0-25-generic Tue Apr  2 20:39   still running
+user     tty2         tty2             Mon Apr  1 21:19 - down   (01:11)
+user     seat0        login screen     Mon Apr  1 21:19 - down   (01:11)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 21:18 - 22:31  (01:12)
+user     tty2         tty2             Mon Apr  1 11:13 - down   (00:55)
+user     seat0        login screen     Mon Apr  1 11:13 - down   (00:55)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 11:12 - 12:08  (00:55)
+user     tty2         tty2             Mon Apr  1 11:09 - down   (00:01)
+user     seat0        login screen     Mon Apr  1 11:09 - down   (00:01)
+reboot   system boot  6.5.0-25-generic Mon Apr  1 11:08 - 11:10  (00:01)
+user     tty2         tty2             Sun Mar 31 21:33 - down   (02:18)
+user     seat0        login screen     Sun Mar 31 21:33 - down   (02:18)
+reboot   system boot  6.5.0-25-generic Sun Mar 31 21:33 - 23:52  (02:18)
+user     tty2         tty2             Sun Mar 31 20:36 - down   (00:34)
+user     seat0        login screen     Sun Mar 31 20:36 - down   (00:34)
+reboot   system boot  6.5.0-25-generic Sun Mar 31 20:36 - 21:11  (00:35)
+
+wtmp begins Wed Jan 10 08:19:20 2024
+user@shivas-pc:~$ nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+** server can't find google.com: SERVFAIL
+
+user@shivas-pc:~$ cd Desktop
+user@shivas-pc:~/Desktop$ mkdir newfile
+user@shivas-pc:~/Desktop$ rmdir newfile
+user@shivas-pc:~/Desktop$ 
+user@shivas-pc:~/Desktop$ top
+
+top - 21:22:02 up 42 min,  2 users,  load average: 0.27, 0.27, 0.27
+Tasks: 240 total,   1 running, 238 sleeping,   0 stopped,   1 zombie
+%Cpu(s):  3.0 us,  0.8 sy,  0.0 ni, 96.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :   7711.1 total,   2708.9 free,   3180.9 used,   3055.6 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   4530.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                
+   1893 user      20   0 5433412 317264 145448 S   5.7   4.0   2:07.73 gnome-shell                                                                            
+   5292 user      20   0  786976  65736  51340 S   3.3   0.8   0:07.10 gnome-terminal-                                                                        
+   4275 user      20   0 2808500 277448 113692 S   2.3   3.5   2:03.05 Isolated Web Co                                                                        
+   3894 user      20   0   11.7g 420764 220484 S   1.7   5.3   4:30.37 firefox                                                                                
+    840 mysql     20   0 2375896 396488  35840 S   0.7   5.0   0:17.16 mysqld                                                                                 
+     15 root      20   0       0      0      0 S   0.3   0.0   0:00.35 ksoftirqd/0                                                                            
+    155 root     -51   0       0      0      0 S   0.3   0.0   0:07.91 irq/163-SYNA7DAB:00                                                                    
+    554 systemd+  20   0   90564   7424   6656 S   0.3   0.1   0:00.08 systemd-timesyn                                                                        
+   2061 user      20   0  388656  11920   6912 S   0.3   0.2   0:03.17 ibus-daemon                                                                            
+   2280 user      20   0  422540  28976  18544 S   0.3   0.4   0:02.04 ibus-extension-                                                                        
+   5266 root      20   0       0      0      0 I   0.3   0.0   0:00.33 kworker/0:2-events                                                                     
+      1 root      20   0  169676  12912   8944 S   0.0   0.2   0:01.02 systemd                                                                                                              
+user@shivas-pc:~/Desktop$ ps
+    PID TTY          TIME CMD
+   5323 pts/0    00:00:00 bash
+   5521 pts/0    00:00:00 ps
+user@shivas-pc:~/Desktop$ date
+Tuesday 02 April 2024 09:24:35 PM IST
+user@shivas-pc:~/Desktop$ cal
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal
+user@shivas-pc:~/Desktop$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             789624     2244    787380   1% /run
+/dev/nvme0n1p2 244506940 47906712 184107172  21% /
+tmpfs            3948108        0   3948108   0% /dev/shm
+tmpfs               5120        8      5112   1% /run/lock
+efivarfs             184      135        45  76% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    523248     6236    517012   2% /boot/efi
+tmpfs             789620     2520    787100   1% /run/user/1000
+user@shivas-pc:~/Desktop$ cat>newfile
+hello
+^C
+user@shivas-pc:~/Desktop$ rm newfile
+user@shivas-pc:~/Desktop$ touch newfile
+user@shivas-pc:~/Desktop$ rm newfile
+user@shivas-pc:~/Desktop$ history
+    1  gcc substring.c
+    2  clear
+    3  gcc substring.c
+    4  clear
+    5  gcc substring.c
+    6  clear
+    7  gcc substring.c
+    8  cleaf
+    9  clear
+   10  gcc substring.c
+
+
+#######WEEK2######
+
 user@shivas-pc:~$ gerp -c 'unix' gerpfile.txt
 Command 'gerp' not found, did you mean:
   command 'grep' from deb grep (3.11-2)
